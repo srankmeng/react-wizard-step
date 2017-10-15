@@ -7,7 +7,19 @@
     "start": "webpack-dev-server --hot --port=3000 --open --content-base example"
   },
   "author": "Jaturong Duangchaiyusuk",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/srankmeng/react-wizard-step"
+  },
+  "keywords": [
+    "react",
+    "wizard",
+    "step",
+    "es6",
+    "steps",
+    "react-component"
+  ],
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "babel-core": "^6.8.0",
