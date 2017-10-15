@@ -106,11 +106,18 @@ class WizardStep extends Component {
     return !stepList[currentIndex - 1].isSub || stepList[currentIndex - 1].subStep <= 1
   }
 
-  doneStep = (callback) => {
-    this.setState({ isDone: true })
+  beforeDoneStep = (callback) => {
     if (callback) {
-      callback()
+      if (callback() !== false) {
+        this.doneStep()
+      }
+    } else {
+      this.doneStep()
     }
+  }
+
+  doneStep = () => {
+    this.setState({ isDone: true })
   }
 
   generateStepClass = (indexItem) => {
@@ -166,7 +173,7 @@ class WizardStep extends Component {
         goToStep={ indexItem => this.goToStep(indexItem)}
         increaseStep={callback => this.beforeIncreaseStep(callback)}
         decreaseStep={() => this.decreaseStep()}
-        doneStep={callback => this.doneStep(callback)}
+        doneStep={callback => this.beforeDoneStep(callback)}
         afterDoneComponent={afterDoneComponent}
         isDone={isDone}
         isShowStepBar={isShowStepBar}
