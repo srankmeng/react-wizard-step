@@ -1,1 +1,2 @@
-# react-wizard-step
+# react-redux-webpack-starter
+React redux webpack starter project
