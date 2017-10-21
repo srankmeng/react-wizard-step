@@ -1,4 +1,3 @@
-// const webpack = require('webpack')
 const path = require('path')
 const autoprefixer = require('autoprefixer')
 
@@ -9,6 +8,11 @@ module.exports = {
     publicPath: '/example/static/',
     path: path.join(__dirname, 'example', 'static'),
     filename: 'bundle.js',
+  },
+  resolve: {
+    alias: {
+      'react-wizard-step': path.resolve(__dirname, 'src'),
+    },
   },
   module: {
     loaders: [

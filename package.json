@@ -1,11 +1,11 @@
 {
-  "name": "react-wizard-stepppp",
+  "name": "react-wizard-step",
   "version": "0.1.0",
   "description": "React wizard step",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "webpack-dev-server --hot --port=3000 --open --content-base example",
-    "test": "echo \"Sorry: there is no test now\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run clean-lib && npm run build-lib",
     "clean-lib": "rimraf lib/*",
     "build-lib": "babel src --out-dir lib --source-maps inline --copy-files"
@@ -14,7 +14,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/srankmeng/react-wizard-step"
+    "url": "https://github.com/srankmeng/react-wizard-step.git"
   },
   "keywords": [
     "react",
@@ -24,6 +24,10 @@
     "steps",
     "react-component"
   ],
+  "bugs": {
+    "url": "https://github.com/srankmeng/react-wizard-step/issues"
+  },
+  "homepage": "https://github.com/srankmeng/react-wizard-step",
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "babel-core": "^6.8.0",
@@ -55,7 +59,6 @@
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-wizard-step": "^0.1.0"
+    "react-dom": "^15.5.4"
   }
 }
