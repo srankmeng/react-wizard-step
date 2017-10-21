@@ -1,6 +1,6 @@
 {
   "name": "react-wizard-step",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React wizard step",
   "main": "lib/index.js",
   "scripts": {
@@ -64,6 +64,6 @@
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4",
+    "react-dom": "^15.5.4"
   }
 }
