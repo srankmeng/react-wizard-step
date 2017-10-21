@@ -1,6 +1,6 @@
 {
   "name": "react-wizard-step",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React wizard step",
   "main": "lib/index.js",
   "scripts": {
@@ -8,7 +8,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run clean-lib && npm run build-lib",
     "clean-lib": "rimraf lib/*",
-    "build-lib": "babel src --out-dir lib --source-maps inline --copy-files"
+    "build-lib": "babel src --out-dir lib --source-maps inline --copy-files",
+    "bump-patch": "npm --no-git-tag-version version patch",
+    "bump-minor": "npm --no-git-tag-version version minor",
+    "bump-major": "npm --no-git-tag-version version major",
+    "publish": "npm publish"
   },
   "author": "Jaturong Duangchaiyusuk",
   "license": "MIT",
@@ -46,6 +50,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
+    "extract-text-webpack-plugin": "^3.0.1",
     "node-sass": "^4.5.3",
     "path": "^0.12.7",
     "postcss-loader": "^2.0.6",
@@ -59,6 +64,6 @@
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
   }
 }
