@@ -1,30 +1,32 @@
+import styled from 'styled-components'
+import { lighten } from 'polished'
 
-$border_color: #aaa;
-$light_blue: #128eff;
+const borderColor = '#aaa'
+const lightBlue = '#128eff'
 
-.button {
-  display: inline-block;
-  padding: 6px 12px;
-  margin: 0 5px;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.428571429;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
-  color: #fff;
-  background-color: $light_blue;
-  border: 1px solid $light_blue;
-
-  &:hover, &:focus {
+export const Button = styled.a`
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 0 5px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
     color: #fff;
-    background-color: lighten($light_blue, 5%);
-    border: 1px solid $light_blue;
-  }
-}
+    background-color: ${lightBlue};
+    border: 1px solid ${lightBlue};
 
-.step-container {
+    &:hover, &:focus {
+        color: #fff;
+        background-color: ${lighten(0.05, lightBlue)};
+        border: 1px solid ${lightBlue};
+    }
+`
+
+export const StepContainer = styled.div`
   padding: 20px 0px;
 
   .step-title {
@@ -45,8 +47,8 @@ $light_blue: #128eff;
     .step {
       position: relative;
       display: inline-block;
-      border: 1px solid $border_color;
-      color: $border_color;
+      border: 1px solid ${borderColor};
+      color: ${borderColor};
       width: 24px;
       height: 24px;
       text-align: center;
@@ -59,7 +61,7 @@ $light_blue: #128eff;
       &:before {
         content: " ";
         position: absolute;
-        border-top: 1px solid $border_color;
+        border-top: 1px solid ${borderColor};
         width: 50px;
         top: 11px;
         right: 100%;
@@ -74,10 +76,10 @@ $light_blue: #128eff;
 
       &.done, &.doing {
         color: #fff;
-        background: $light_blue;
-        border: 1px solid $light_blue;
+        background: ${lightBlue};
+        border: 1px solid ${lightBlue};
         &:before {
-          border-top: 1px solid $light_blue;
+          border-top: 1px solid ${lightBlue};
         }
       }
     }
@@ -103,4 +105,5 @@ $light_blue: #128eff;
       float: right;
     }
   }
-}
+`
+

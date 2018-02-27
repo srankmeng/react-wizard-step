@@ -62,8 +62,10 @@
   },
   "dependencies": {
     "lodash": "^4.17.4",
+    "polished": "^1.9.2",
     "prop-types": "^15.6.0",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "styled-components": "^3.1.6"
   }
 }
