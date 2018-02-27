@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './index.scss'
+import { Button, StepContainer } from './style'
 
 const WizardStep = ({
   stepList,
@@ -17,9 +17,9 @@ const WizardStep = ({
   isShowStepBar,
   isShowNumber,
 }) => {
-  const previousBtn = <a className="button button-previous" onClick={() => decreaseStep()}>Previous</a>
-  const nextBtn = <a className="button button-next" onClick={() => increaseStep(stepList[currentIndex - 1].handler)}>Next</a>
-  const doneBtn = <a className="button button-done" onClick={() => doneStep(stepList[stepList.length - 1].handler)}>Done</a>
+  const previousBtn = <Button className="button button-previous" onClick={() => decreaseStep()}>Previous</Button>
+  const nextBtn = <Button className="button button-next" onClick={() => increaseStep(stepList[currentIndex - 1].handler)}>Next</Button>
+  const doneBtn = <Button className="button button-done" onClick={() => doneStep(stepList[stepList.length - 1].handler)}>Done</Button>
   const stepBar = (
     <ul className="step-progress">
       {
@@ -42,7 +42,7 @@ const WizardStep = ({
   )
 
   return (
-    <div className="step-container">
+    <StepContainer className="step-container">
       {
         !isDone || !afterDoneComponent ? (
           <div>
@@ -62,7 +62,7 @@ const WizardStep = ({
           </div>
         ) : afterDoneComponent
       }
-    </div>
+    </StepContainer>
   )
 }
 
