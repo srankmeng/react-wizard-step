@@ -1,13 +1,22 @@
 import React from 'react'
 import { render } from 'react-dom'
+import styled from 'styled-components'
 import Common from './Common'
 import SubStep from './SubStep'
 import DoneContent from './DoneContent'
 import EventHandler from './EventHandler'
-import './index.scss'
+
+const Container = styled.div`
+  width: 960px;
+  margin: 0 auto;
+  .section {
+    padding: 20px 50px;
+    border-bottom: 1px solid #ddd;
+  }
+`
 
 const Example = () => (
-  <div className="container">
+  <Container className="container">
     <div className="section">
       <h4>Common</h4>
       <Common />
@@ -24,7 +33,7 @@ const Example = () => (
       <h4>Event Handler</h4>
       <EventHandler />
     </div>
-  </div>
+  </Container>
 )
 
 render(<Example />, document.getElementById('app'))
